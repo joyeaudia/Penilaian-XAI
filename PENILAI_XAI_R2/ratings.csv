@@ -1,0 +1,49 @@
+item_id,rater_id,dimension,score,alasan_singkat
+XAI-001,R2,visual_clarity,4,"Wajah tokoh utama tersorot dengan kontras yang baik sehingga mudah dikenali, walau sebagian titik melebar ke latar."
+XAI-001,R2,visual_relevance,2,"Wajah tokoh utama tersorot dengan kontras yang baik sehingga mudah dikenali, walau sebagian titik melebar ke latar."
+XAI-001,R2,decision_understanding,3,"Wajah tokoh utama tersorot dengan kontras yang baik sehingga mudah dikenali, walau sebagian titik melebar ke latar."
+XAI-002,R2,visual_clarity,3,"Sorotan terpecah ke bagian depan mobil di bawah dan area langit, membuat fokus utama sampul sulit ditangkap."
+XAI-002,R2,visual_relevance,3,"Sorotan terpecah ke bagian depan mobil di bawah dan area langit, membuat fokus utama sampul sulit ditangkap."
+XAI-002,R2,decision_understanding,2,"Sorotan terpecah ke bagian depan mobil di bawah dan area langit, membuat fokus utama sampul sulit ditangkap."
+XAI-003,R2,visual_clarity,4,Figur utama di sebelah kanan serta area teks investigasi mendapat sorotan relevan yang cukup membantu pembacaan.
+XAI-003,R2,visual_relevance,4,Figur utama di sebelah kanan serta area teks investigasi mendapat sorotan relevan yang cukup membantu pembacaan.
+XAI-003,R2,decision_understanding,3,Figur utama di sebelah kanan serta area teks investigasi mendapat sorotan relevan yang cukup membantu pembacaan.
+XAI-004,R2,visual_clarity,3,Peta lebih dominan menyorot area tajuk atas ketimbang simbol bawang putih dan sarung tangan hitam di tengah.
+XAI-004,R2,visual_relevance,3,Peta lebih dominan menyorot area tajuk atas ketimbang simbol bawang putih dan sarung tangan hitam di tengah.
+XAI-004,R2,decision_understanding,2,Peta lebih dominan menyorot area tajuk atas ketimbang simbol bawang putih dan sarung tangan hitam di tengah.
+XAI-005,R2,visual_clarity,4,"Sorotan cukup jelas pada siluet jubah hakim, namun penyebaran warna ke ruang putih di samping mengurangi ketajaman."
+XAI-005,R2,visual_relevance,4,"Sorotan cukup jelas pada siluet jubah hakim, namun penyebaran warna ke ruang putih di samping mengurangi ketajaman."
+XAI-005,R2,decision_understanding,2,"Sorotan cukup jelas pada siluet jubah hakim, namun penyebaran warna ke ruang putih di samping mengurangi ketajaman."
+XAI-006,R2,visual_clarity,4,"Posisi tangan yang membuka kemeja tersorot kuat dan relevan dengan ilustrasi, meski alasan topik masih terasa umum."
+XAI-006,R2,visual_relevance,4,"Posisi tangan yang membuka kemeja tersorot kuat dan relevan dengan ilustrasi, meski alasan topik masih terasa umum."
+XAI-006,R2,decision_understanding,2,"Posisi tangan yang membuka kemeja tersorot kuat dan relevan dengan ilustrasi, meski alasan topik masih terasa umum."
+XAI-007,R2,visual_clarity,4,Judul utama dan komponen regulator elpiji tersorot cukup rapi sehingga alur pembacaan topik ekonomi cukup masuk akal.
+XAI-007,R2,visual_relevance,4,Judul utama dan komponen regulator elpiji tersorot cukup rapi sehingga alur pembacaan topik ekonomi cukup masuk akal.
+XAI-007,R2,decision_understanding,3,Judul utama dan komponen regulator elpiji tersorot cukup rapi sehingga alur pembacaan topik ekonomi cukup masuk akal.
+XAI-008,R2,visual_clarity,3,"Area panas menumpuk di bagian atas sampul, sementara elemen visual inti di bagian tengah hampir terlewatkan."
+XAI-008,R2,visual_relevance,2,"Area panas menumpuk di bagian atas sampul, sementara elemen visual inti di bagian tengah hampir terlewatkan."
+XAI-008,R2,decision_understanding,2,"Area panas menumpuk di bagian atas sampul, sementara elemen visual inti di bagian tengah hampir terlewatkan."
+XAI-009,R2,visual_clarity,3,"Sorotan cenderung menyebar di bagian tajuk atas dan dedaunan pinggir, kurang memusat pada tokoh yang duduk."
+XAI-009,R2,visual_relevance,2,"Sorotan cenderung menyebar di bagian tajuk atas dan dedaunan pinggir, kurang memusat pada tokoh yang duduk."
+XAI-009,R2,decision_understanding,2,"Sorotan cenderung menyebar di bagian tajuk atas dan dedaunan pinggir, kurang memusat pada tokoh yang duduk."
+XAI-010,R2,visual_clarity,3,"Peta hanya menyorot area teks bagian atas dan sedikit di pojok bawah, meninggalkan ilustrasi utama tanpa sorotan."
+XAI-010,R2,visual_relevance,2,"Peta hanya menyorot area teks bagian atas dan sedikit di pojok bawah, meninggalkan ilustrasi utama tanpa sorotan."
+XAI-010,R2,decision_understanding,2,"Peta hanya menyorot area teks bagian atas dan sedikit di pojok bawah, meninggalkan ilustrasi utama tanpa sorotan."
+XAI-011,R2,visual_clarity,4,"Sebagian teks nama tokoh dan bagian dada tersorot cukup jelas, tetapi latar kanan juga ikut memerah tanpa alasan kuat."
+XAI-011,R2,visual_relevance,3,"Sebagian teks nama tokoh dan bagian dada tersorot cukup jelas, tetapi latar kanan juga ikut memerah tanpa alasan kuat."
+XAI-011,R2,decision_understanding,2,"Sebagian teks nama tokoh dan bagian dada tersorot cukup jelas, tetapi latar kanan juga ikut memerah tanpa alasan kuat."
+XAI-012,R2,visual_clarity,3,"Area judul bawah dan tajuk atas tersorot lumayan jelas, walau bagian wajah hakim dan ponsel hanya terkena sedikit."
+XAI-012,R2,visual_relevance,4,"Area judul bawah dan tajuk atas tersorot lumayan jelas, walau bagian wajah hakim dan ponsel hanya terkena sedikit."
+XAI-012,R2,decision_understanding,2,"Area judul bawah dan tajuk atas tersorot lumayan jelas, walau bagian wajah hakim dan ponsel hanya terkena sedikit."
+XAI-013,R2,visual_clarity,4,"Sorotan melintang cukup tegas pada badan ilustrasi di tengah, namun melebar hingga ke tepi latar belakang."
+XAI-013,R2,visual_relevance,2,"Sorotan melintang cukup tegas pada badan ilustrasi di tengah, namun melebar hingga ke tepi latar belakang."
+XAI-013,R2,decision_understanding,2,"Sorotan melintang cukup tegas pada badan ilustrasi di tengah, namun melebar hingga ke tepi latar belakang."
+XAI-014,R2,visual_clarity,3,"Peta panas tampak menyebar di area gelap bagian atas dan sedikit menyentuh kepala tokoh, sehingga kurang selektif."
+XAI-014,R2,visual_relevance,3,"Peta panas tampak menyebar di area gelap bagian atas dan sedikit menyentuh kepala tokoh, sehingga kurang selektif."
+XAI-014,R2,decision_understanding,2,"Peta panas tampak menyebar di area gelap bagian atas dan sedikit menyentuh kepala tokoh, sehingga kurang selektif."
+XAI-015,R2,visual_clarity,3,"Beberapa bagian teks latar dan sisi samping tersorot, tetapi fokus pada tokoh utama belum terlihat dominan."
+XAI-015,R2,visual_relevance,4,"Beberapa bagian teks latar dan sisi samping tersorot, tetapi fokus pada tokoh utama belum terlihat dominan."
+XAI-015,R2,decision_understanding,2,"Beberapa bagian teks latar dan sisi samping tersorot, tetapi fokus pada tokoh utama belum terlihat dominan."
+XAI-016,R2,visual_clarity,4,"Sorotan mengenai tokoh di bagian atas serta jalur selang dan tabung gas, cukup selaras dengan tema pasokan energi."
+XAI-016,R2,visual_relevance,4,"Sorotan mengenai tokoh di bagian atas serta jalur selang dan tabung gas, cukup selaras dengan tema pasokan energi."
+XAI-016,R2,decision_understanding,3,"Sorotan mengenai tokoh di bagian atas serta jalur selang dan tabung gas, cukup selaras dengan tema pasokan energi."

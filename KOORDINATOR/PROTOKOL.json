@@ -1,0 +1,124 @@
+{
+  "schema": "xai-rater-package-v2",
+  "seed": 20261117,
+  "sample_ids": [
+    "TMP-0514AFE1ADC9",
+    "TMP-B4159E66B480",
+    "TMP-E8E65B336C7E",
+    "TMP-5802D0009C82",
+    "TMP-AE16180EE0D6",
+    "TMP-B49A0E2496DA",
+    "TMP-E9A5F94EF9F7",
+    "TMP-3950DA9B1729"
+  ],
+  "sample_source": "R4 rater protocol, tempo-clip-indobert-xai delivery/HASIL_REVISI_JOY_20261108_R4 (seed 20261101)",
+  "text_source": "03_data/DATASET_740_TASK2_DOMAIN.csv",
+  "website_commit": "050d129375e9f98975515a58d39bb30d97860c0d",
+  "backend": {
+    "architecture": "CLIP-L14 full/crop + IndoBERT frozen first 10 layers/trained last 2 + shared 256 + three jointly trained heads",
+    "asset_sha256": {
+      "bert_config.json": "08d2da81e48323154b5ff9d15af54e8faacc8dd711c6ec08b538c2d8fdf72084",
+      "fold1.pt": "479217b2f18c1e0b48111eaedfa3341f9d9ddac06dbbf270b2841a7365ff7ed1",
+      "fold2.pt": "a17e8a2c5ceca4a97b5909799501e3e5d6cef76f4ce70c5923136de46934c3c6",
+      "fold3.pt": "9a4e8b1ebdcb4a226153ba869710e65efe18e12dd6dd6193540f0105512b81d6",
+      "fold4.pt": "39a160a3288c7c1a1c9b04f36d6e25b472fa5959b3a16137e1ce441faa31ae48",
+      "fold5.pt": "0c6e5b8c7b12d1c03682733c477372dde48aeb76ed95926371f8bf47423fb69f",
+      "front_cache.npz": "312a130025a20c18f38668293534528fb82072a139c0c1ca41ad8abd23559cd4",
+      "protocol.json": "b6a8c7d2cc4b58c5b8eb0fb5f09f8a7ded983011c9b2871e29c07949f63dc73a",
+      "tail_initial.pt": "cfeadc75ea8336eab297eaf831ada3a5c792f83dea1b9b580144b4160a8f812c"
+    },
+    "backend": "e42-tail-grid",
+    "batch_upload_supported": true,
+    "cache_manifest_sha256": "9773684278f995f2d2da4f4c12158568077372270157ca85a0a99a2427829040",
+    "calibration": {
+      "ece_after_cv": {
+        "task1_issue": 0.061871155531390616,
+        "task2_domain_sumber": 0.03829388916810301,
+        "task3_primary_entity_type": 0.027304729967394685
+      },
+      "ece_before": {
+        "task1_issue": 0.07460104192149991,
+        "task2_domain_sumber": 0.20566364926905709,
+        "task3_primary_entity_type": 0.18111846794361217
+      },
+      "method": "temperature_scaling",
+      "note": "T dari 740 OOF single-fold. Unggahan memakai rerata softmax(logit/T) lima fold; kalibrasi unggahan belum dievaluasi. XAI tetap memakai softmax asli.",
+      "temperatures": {
+        "task1_issue": 1.2917925341635461,
+        "task2_domain_sumber": 2.151570513576943,
+        "task3_primary_entity_type": 1.7845885791580811
+      }
+    },
+    "candidate": "E42",
+    "clip": {
+      "bytes": 1710517748,
+      "file": "open_clip_pytorch_model.safetensors",
+      "repo": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
+      "revision": "1627032197142fbe2a7cfec626f4ced3ae60d07a",
+      "sha256": "7d129ed747e0ed53e82dfcc140382b51be66b56e6a9bdc3258afd2846e3bb019"
+    },
+    "dataset_protocol": "checkpoint outer-fold E42 yang tidak melatih ID dataset tersebut",
+    "dataset_sha256": "cba20f8250bcb59481ed2d3d7d5d42fb8242c96a7ba2d11a2cd02ad80862961a",
+    "device": "cpu",
+    "evaluation": {
+      "macro_f1": {
+        "task1_issue": 0.5254826236457082,
+        "task2_domain_sumber": 0.3955604325695003,
+        "task3_primary_entity_type": 0.4033984095814434
+      },
+      "protocol": "five outer folds; held-out checkpoint per dataset ID; CPU FP32 canonical verification",
+      "samples": 740
+    },
+    "indobert": {
+      "files": {
+        "config.json": "c40b372acbdfbde38aa225c6ffdd09d1076904f2445532e2bb7eb92f95fc5954",
+        "pytorch_model.bin": "725fead20c01d47e0192426ac1474eff19e993b52b971c05bca5e96054be41f8",
+        "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "tokenizer_config.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "vocab.txt": "35cfc7be6dc3ec71102248722f352830a8fd89b5a5dadb83d70c2f7794ddbc11"
+      },
+      "repo": "indobenchmark/indobert-base-p1",
+      "revision": "c2cd0b51ddce6580eb35263b39b0a1e5fb0a39e2"
+    },
+    "limitation": "Dataset uses its held-out outer-fold checkpoint. New uploads average five E42 checkpoints and are not a separate benchmark; scores are uncalibrated.",
+    "ready": true,
+    "tasks": [
+      "task1_issue",
+      "task2_domain_sumber",
+      "task3_primary_entity_type"
+    ],
+    "text_xai": "perturbasi headline; supporting text tetap",
+    "upload_protocol": "rerata probabilitas lima checkpoint E42; belum dievaluasi terpisah",
+    "upload_requires": [],
+    "version": "e42-tail-grid-v1"
+  },
+  "model_version": "e42-tail-grid-v1",
+  "real_map": "E42 website |gradient x activation| CLIP ViT-L/14 resblocks[-2], full/crop views averaged (tail_rich_engine.gabung_view), unified map (cam_padu) over three task heads, held-out fold for dataset samples",
+  "control_map": "same raw patch grid as the real map, circularly shifted by a seeded offset of 5-11 patches per axis and view (np.roll), combined and normalised through the identical path; shapes and value distribution identical, location displaced",
+  "rendering": "website xai_core.heatmap_overlay_linear(persentil=95) for both real and control; embedded as JPEG q86 max height 1000 px",
+  "cam_shapes": [
+    [
+      224,
+      224
+    ]
+  ],
+  "items": 16,
+  "raters": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "rater_shows_model_reading": true,
+  "map_seconds": {
+    "TMP-0514AFE1ADC9": 10.6,
+    "TMP-B4159E66B480": 5.4,
+    "TMP-E8E65B336C7E": 5.0,
+    "TMP-5802D0009C82": 3.9,
+    "TMP-AE16180EE0D6": 5.7,
+    "TMP-B49A0E2496DA": 4.1,
+    "TMP-E9A5F94EF9F7": 3.4,
+    "TMP-3950DA9B1729": 3.5
+  }
+}

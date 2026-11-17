@@ -1,0 +1,49 @@
+item_id,rater_id,dimension,score,alasan_singkat
+XAI-001,R3,visual_clarity,3,"Area mata dan mulut tokoh tersorot cukup jelas, tetapi sebaran warna merah di latar samping agak mengganggu fokus."
+XAI-001,R3,visual_relevance,2,"Area mata dan mulut tokoh tersorot cukup jelas, tetapi sebaran warna merah di latar samping agak mengganggu fokus."
+XAI-001,R3,decision_understanding,2,"Area mata dan mulut tokoh tersorot cukup jelas, tetapi sebaran warna merah di latar samping agak mengganggu fokus."
+XAI-002,R3,visual_clarity,3,"Sorotan banyak berada di sudut bawah dan tepi atas sampul, sehingga keterkaitan dengan dinamika dua tokoh kurang kuat."
+XAI-002,R3,visual_relevance,3,"Sorotan banyak berada di sudut bawah dan tepi atas sampul, sehingga keterkaitan dengan dinamika dua tokoh kurang kuat."
+XAI-002,R3,decision_understanding,2,"Sorotan banyak berada di sudut bawah dan tepi atas sampul, sehingga keterkaitan dengan dinamika dua tokoh kurang kuat."
+XAI-003,R3,visual_clarity,3,"Sorotan pada tokoh kanan dan area judul terlihat sangat tegas dan mudah ditunjuk, membantu memahami fokus model."
+XAI-003,R3,visual_relevance,4,"Sorotan pada tokoh kanan dan area judul terlihat sangat tegas dan mudah ditunjuk, membantu memahami fokus model."
+XAI-003,R3,decision_understanding,3,"Sorotan pada tokoh kanan dan area judul terlihat sangat tegas dan mudah ditunjuk, membantu memahami fokus model."
+XAI-004,R3,visual_clarity,3,"Warna panas berkumpul di bagian logo atas dan pinggir kiri, belum menyentuh objek utama bawang putih secara memadai."
+XAI-004,R3,visual_relevance,3,"Warna panas berkumpul di bagian logo atas dan pinggir kiri, belum menyentuh objek utama bawang putih secara memadai."
+XAI-004,R3,decision_understanding,2,"Warna panas berkumpul di bagian logo atas dan pinggir kiri, belum menyentuh objek utama bawang putih secara memadai."
+XAI-005,R3,visual_clarity,4,"Bagian tubuh hakim tersorot cukup jelas, namun meluas ke latar putih sehingga prioritas fitur terlihat kurang spesifik."
+XAI-005,R3,visual_relevance,4,"Bagian tubuh hakim tersorot cukup jelas, namun meluas ke latar putih sehingga prioritas fitur terlihat kurang spesifik."
+XAI-005,R3,decision_understanding,2,"Bagian tubuh hakim tersorot cukup jelas, namun meluas ke latar putih sehingga prioritas fitur terlihat kurang spesifik."
+XAI-006,R3,visual_clarity,4,"Gerakan tangan membuka jas tersorot cukup baik pada peta, walau belum menjelaskan mengapa model memilih kiasan tersebut."
+XAI-006,R3,visual_relevance,4,"Gerakan tangan membuka jas tersorot cukup baik pada peta, walau belum menjelaskan mengapa model memilih kiasan tersebut."
+XAI-006,R3,decision_understanding,2,"Gerakan tangan membuka jas tersorot cukup baik pada peta, walau belum menjelaskan mengapa model memilih kiasan tersebut."
+XAI-007,R3,visual_clarity,4,Sorotan pada judul utama dan bagian bawah tabung gas mudah dikenali serta cukup mendukung pembacaan topik bisnis.
+XAI-007,R3,visual_relevance,4,Sorotan pada judul utama dan bagian bawah tabung gas mudah dikenali serta cukup mendukung pembacaan topik bisnis.
+XAI-007,R3,decision_understanding,3,Sorotan pada judul utama dan bagian bawah tabung gas mudah dikenali serta cukup mendukung pembacaan topik bisnis.
+XAI-008,R3,visual_clarity,2,Peta menyorot bagian atas sampul secara lebar dan menyisakan objek utama di tengah dalam kondisi hampir dingin.
+XAI-008,R3,visual_relevance,3,Peta menyorot bagian atas sampul secara lebar dan menyisakan objek utama di tengah dalam kondisi hampir dingin.
+XAI-008,R3,decision_understanding,2,Peta menyorot bagian atas sampul secara lebar dan menyisakan objek utama di tengah dalam kondisi hampir dingin.
+XAI-009,R3,visual_clarity,2,"Area panas tersebar di bagian tajuk atas dan dedaunan, sementara ketiga figur utama tidak menjadi pusat perhatian."
+XAI-009,R3,visual_relevance,3,"Area panas tersebar di bagian tajuk atas dan dedaunan, sementara ketiga figur utama tidak menjadi pusat perhatian."
+XAI-009,R3,decision_understanding,2,"Area panas tersebar di bagian tajuk atas dan dedaunan, sementara ketiga figur utama tidak menjadi pusat perhatian."
+XAI-010,R3,visual_clarity,3,"Fokus sorotan tertahan di bagian teks atas sampul dan sedikit di bawah, kurang menangkap metafora karikatur."
+XAI-010,R3,visual_relevance,3,"Fokus sorotan tertahan di bagian teks atas sampul dan sedikit di bawah, kurang menangkap metafora karikatur."
+XAI-010,R3,decision_understanding,2,"Fokus sorotan tertahan di bagian teks atas sampul dan sedikit di bawah, kurang menangkap metafora karikatur."
+XAI-011,R3,visual_clarity,4,"Sorotan terlihat cukup jelas pada teks judul bawah dan bahu tokoh, tetapi latar belakang masih ikut tersorot."
+XAI-011,R3,visual_relevance,3,"Sorotan terlihat cukup jelas pada teks judul bawah dan bahu tokoh, tetapi latar belakang masih ikut tersorot."
+XAI-011,R3,decision_understanding,2,"Sorotan terlihat cukup jelas pada teks judul bawah dan bahu tokoh, tetapi latar belakang masih ikut tersorot."
+XAI-012,R3,visual_clarity,3,"Peta menyorot area sekitar judul bawah dan tajuk atas, sedangkan detail ponsel dan ekspresi hakim kurang menonjol."
+XAI-012,R3,visual_relevance,3,"Peta menyorot area sekitar judul bawah dan tajuk atas, sedangkan detail ponsel dan ekspresi hakim kurang menonjol."
+XAI-012,R3,decision_understanding,2,"Peta menyorot area sekitar judul bawah dan tajuk atas, sedangkan detail ponsel dan ekspresi hakim kurang menonjol."
+XAI-013,R3,visual_clarity,6,"Ilustrasi utama di tengah mendapat sorotan yang mudah dilihat, meski garis panasnya melebar ke latar kiri dan kanan."
+XAI-013,R3,visual_relevance,4,"Ilustrasi utama di tengah mendapat sorotan yang mudah dilihat, meski garis panasnya melebar ke latar kiri dan kanan."
+XAI-013,R3,decision_understanding,2,"Ilustrasi utama di tengah mendapat sorotan yang mudah dilihat, meski garis panasnya melebar ke latar kiri dan kanan."
+XAI-014,R3,visual_clarity,3,"Sorotan menyentuh kepala tokoh kanan dan teks judul utama, namun sebaran di latar atas masih terlalu luas."
+XAI-014,R3,visual_relevance,3,"Sorotan menyentuh kepala tokoh kanan dan teks judul utama, namun sebaran di latar atas masih terlalu luas."
+XAI-014,R3,decision_understanding,2,"Sorotan menyentuh kepala tokoh kanan dan teks judul utama, namun sebaran di latar atas masih terlalu luas."
+XAI-015,R3,visual_clarity,4,"Area teks judul di samping tersorot cukup jelas, walau bagian wajah tokoh utama hanya mendapat sedikit penekanan."
+XAI-015,R3,visual_relevance,3,"Area teks judul di samping tersorot cukup jelas, walau bagian wajah tokoh utama hanya mendapat sedikit penekanan."
+XAI-015,R3,decision_understanding,2,"Area teks judul di samping tersorot cukup jelas, walau bagian wajah tokoh utama hanya mendapat sedikit penekanan."
+XAI-016,R3,visual_clarity,4,Sorotan pada tokoh tengah serta bagian tabung elpiji terlihat jelas dan cukup masuk akal dengan isi sampul.
+XAI-016,R3,visual_relevance,2,Sorotan pada tokoh tengah serta bagian tabung elpiji terlihat jelas dan cukup masuk akal dengan isi sampul.
+XAI-016,R3,decision_understanding,3,Sorotan pada tokoh tengah serta bagian tabung elpiji terlihat jelas dan cukup masuk akal dengan isi sampul.
