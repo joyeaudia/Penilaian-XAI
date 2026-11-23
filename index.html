@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Penilaian Peta XAI</title>
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --surface: #ffffff;
+    --text: #1d1d1b;
+    --muted: #6b6a66;
+    --border: #e2e0da;
+    --accent: #2f5bd3;
+    --accent-text: #ffffff;
+    --accent-soft: #e8eefc;
+    --error: #b3261e;
+    --error-soft: #fbeceb;
+    --ok: #1f7a4d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151514;
+      --surface: #1f1f1d;
+      --text: #ecebe7;
+      --muted: #a09f9a;
+      --border: #33332f;
+      --accent: #7b9cf5;
+      --accent-text: #0f1530;
+      --accent-soft: #232b45;
+      --error: #f2a49e;
+      --error-soft: #3a2221;
+      --ok: #7fd1a6;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151514; --surface: #1f1f1d; --text: #ecebe7; --muted: #a09f9a;
+    --border: #33332f; --accent: #7b9cf5; --accent-text: #0f1530; --accent-soft: #232b45;
+    --error: #f2a49e; --error-soft: #3a2221; --ok: #7fd1a6;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 48px 16px;
+  }
+  main { width: 100%; max-width: 520px; }
+  .eyebrow {
+    font-size: 13px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 6px;
+  }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 8px; }
+  .lead { color: var(--muted); margin: 0 0 28px; }
+  .list { display: grid; gap: 10px; }
+  .rater {
+    display: flex; align-items: center; gap: 14px;
+    width: 100%; text-align: left;
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border); border-radius: 12px;
+    padding: 14px 16px; font: inherit; cursor: pointer;
+    transition: border-color .15s, background .15s;
+  }
+  .rater:hover { border-color: var(--accent); }
+  .rater:focus-visible, input:focus-visible, .btn:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px;
+  }
+  .badge {
+    flex: none; width: 40px; height: 40px; border-radius: 10px;
+    display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent);
+    font-weight: 600; font-size: 14px;
+  }
+  .rater .name { font-weight: 550; }
+  .rater .sub { font-size: 13px; color: var(--muted); }
+  .rater .arrow { margin-left: auto; color: var(--muted); }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px;
+  }
+  label { display: block; font-weight: 550; margin-bottom: 6px; }
+  input {
+    width: 100%; font: inherit; font-size: 18px; letter-spacing: .04em;
+    padding: 12px 14px; border-radius: 10px;
+    border: 1px solid var(--border); background: var(--bg); color: var(--text);
+  }
+  input[aria-invalid="true"] { border-color: var(--error); }
+  .hint { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+  .error {
+    display: none; margin: 14px 0 0; padding: 10px 12px; border-radius: 10px;
+    background: var(--error-soft); color: var(--error); font-size: 14px;
+  }
+  .error.show { display: block; }
+  .actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+  .btn {
+    font: inherit; font-weight: 550; border-radius: 10px; cursor: pointer;
+    padding: 11px 18px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text);
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); flex: 1; }
+  .btn:disabled { opacity: .6; cursor: progress; }
+  .ok { color: var(--ok); font-weight: 550; }
+  footer { margin-top: 28px; font-size: 13px; color: var(--muted); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <!-- Langkah 1: pilih nama -->
+  <section id="step-pick">
+    <p class="eyebrow">Penilaian Peta XAI</p>
+    <h1>Kamu penilai yang mana?</h1>
+    <p class="lead">Pilih namamu. Setelah itu kamu akan diminta memasukkan NIM untuk verifikasi.</p>
+    <div class="list" id="rater-list"></div>
+    <footer>Kerjakan sendiri, sekitar 20–30 menit. Setelah selesai, unduh file CSV hasilmu dan kirim ke koordinator.</footer>
+  </section>
+
+  <!-- Langkah 2: verifikasi NIM -->
+  <section id="step-verify" hidden>
+    <p class="eyebrow" id="verify-code">Penilai</p>
+    <h1 id="verify-name">Nama</h1>
+    <p class="lead">Masukkan NIM-mu untuk membuka halaman penilaian.</p>
+    <form class="card" id="verify-form" novalidate>
+      <label for="nim">NIM</label>
+      <input id="nim" name="nim" inputmode="numeric" autocomplete="off" placeholder="contoh: 01234567890" required>
+      <p class="hint">Hanya angka, tanpa spasi.</p>
+      <p class="error" id="error" role="alert"></p>
+      <div class="actions">
+        <button type="button" class="btn" id="back">Kembali</button>
+        <button type="submit" class="btn primary" id="submit">Verifikasi</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script>
+  // NIM tidak disimpan di sini, hanya SHA-256 dari "xai-v2|<kode>|<nim>".
+  var RATERS = [
+    { code: "R1", name: "Sefia Rizky Ananda",                 hash: "c99074133121377e87456c64e1ff1bbc61f195da7f5ad8043732aed426b25579" },
+    { code: "R2", name: "Siska Dewi Siburian",                hash: "b67e24c2ddbee8c83b31703f734b011a69e6ff73ec003f309c6319cd6cd98185" },
+    { code: "R3", name: "Jesicha Natasha Mashel",             hash: "a8f31c9bf2fc7bd9617a5d3bd9ac6f0397754323f9b61bb23904cc1683fd3c40" },
+    { code: "R4", name: "Precious Giovanni Epiphanea Santoso", hash: "802bbb1ce561e6be0a3fbece480c109f2a2992f34ffb36a240f36e1e40ed7294" },
+    { code: "R5", name: "Gebrina Augustine Padatu",           hash: "8d78f38755e41ccd2290cb39616b65aa7bbfc137e44733fbe71731bfaa3a5dce" }
+  ];
+
+  var stepPick = document.getElementById("step-pick");
+  var stepVerify = document.getElementById("step-verify");
+  var list = document.getElementById("rater-list");
+  var form = document.getElementById("verify-form");
+  var input = document.getElementById("nim");
+  var errorBox = document.getElementById("error");
+  var submitBtn = document.getElementById("submit");
+  var current = null;
+
+  RATERS.forEach(function (r) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "rater";
+    b.innerHTML =
+      '<span class="badge"></span>' +
+      '<span><span class="name"></span><br><span class="sub"></span></span>' +
+      '<span class="arrow" aria-hidden="true">→</span>';
+    b.querySelector(".badge").textContent = r.code;
+    b.querySelector(".name").textContent = r.name;
+    b.querySelector(".sub").textContent = "Penilai " + r.code.slice(1);
+    b.addEventListener("click", function () { openVerify(r); });
+    list.appendChild(b);
+  });
+
+  function openVerify(r) {
+    current = r;
+    document.getElementById("verify-code").textContent = "Penilai " + r.code.slice(1);
+    document.getElementById("verify-name").textContent = r.name;
+    input.value = "";
+    setError("");
+    stepPick.hidden = true;
+    stepVerify.hidden = false;
+    input.focus();
+  }
+
+  document.getElementById("back").addEventListener("click", function () {
+    current = null;
+    stepVerify.hidden = true;
+    stepPick.hidden = false;
+  });
+
+  function setError(msg) {
+    errorBox.textContent = msg;
+    errorBox.classList.toggle("show", !!msg);
+    input.setAttribute("aria-invalid", msg ? "true" : "false");
+  }
+
+  function sha256Hex(text) {
+    var data = new TextEncoder().encode(text);
+    return crypto.subtle.digest("SHA-256", data).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+        return b.toString(16).padStart(2, "0");
+      }).join("");
+    });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!current) return;
+    var nim = input.value.replace(/\D/g, "");
+    if (!nim) { setError("NIM belum diisi."); return; }
+    if (!window.crypto || !crypto.subtle) {
+      setError("Browser ini tidak mendukung verifikasi. Coba buka lewat Chrome atau Edge terbaru.");
+      return;
+    }
+    submitBtn.disabled = true;
+    sha256Hex("xai-v2|" + current.code + "|" + nim).then(function (h) {
+      if (h === current.hash) {
+        try { sessionStorage.setItem("xai-verified", current.code); } catch (err) {}
+        submitBtn.innerHTML = '<span>Terverifikasi, membuka…</span>';
+        window.location.href = "PENILAI_XAI_" + current.code + "/MULAI_DI_SINI.html";
+      } else {
+        submitBtn.disabled = false;
+        setError("NIM tidak cocok dengan nama " + current.name + ". Periksa lagi, atau pastikan kamu memilih nama yang benar.");
+        input.select();
+      }
+    }, function () {
+      submitBtn.disabled = false;
+      setError("Terjadi kesalahan saat verifikasi. Muat ulang halaman lalu coba lagi.");
+    });
+  });
+</script>
+</body>
+</html>
